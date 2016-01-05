@@ -17,21 +17,7 @@ class LocalizationMiddleware implements Middleware {
       }
 
       //Set Locale variable
-      $locale = $this->getLocale();
-      \App::setLocale($locale);
-      \App('laravellocalization')->setLocale($locale);
+      \Site::setLocale();
       return $next($request);
-  }
-
-  private function getLocale() {
-    $host = \Site::host();
-    $siteLocale = \App\Models\SiteLocale::where('url', $host)->first();
-
-    if(empty($siteLocale)) {
-        $error = 'No SiteLocale defined on the database level for host ' . $host;
-        throw new \Exception($error);
-    }
-
-    $locale = $siteLocale->locale->locale;
   }
 }
