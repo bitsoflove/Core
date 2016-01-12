@@ -59,6 +59,7 @@ return [
    */
     'admin-assets' => [
         // Css
+        'multiselect.css' => ['theme' => 'vendor/multiselect/css/multi-select.css'],
         'bootstrap.css' => ['theme' => 'vendor/bootstrap/dist/css/bootstrap.min.css'],
         'font-awesome.css' => ['theme' => 'vendor/font-awesome/css/font-awesome.min.css'],
         'alertify.core.css' => ['theme' => 'css/vendor/alertify/alertify.core.css'],
@@ -76,6 +77,8 @@ return [
         'animate.css' => ['theme' => 'vendor/animate.css/animate.min.css'],
         'pace.css' => ['theme' => 'vendor/admin-lte/plugins/pace/pace.min.css'],
         // Javascript
+        'vendor-multiselect.js' => ['theme' => 'vendor/multiselect/js/jquery.multi-select.js'],
+        'multiselect.js' => ['theme' => 'js/multiselect.js'],
         'bootstrap.js' => ['theme' => 'vendor/bootstrap/dist/js/bootstrap.min.js'],
         'mousetrap.js' => ['theme' => 'js/vendor/mousetrap.min.js'],
         'alertify.js' => ['theme' => 'js/vendor/alertify/alertify.js'],
@@ -122,6 +125,7 @@ return [
            'animate.css',
            'pace.css',
            'asgard.css',
+           'multiselect.css',
        ],
        'js' => [
            'bootstrap.js',
@@ -136,6 +140,8 @@ return [
            'pace.js',
            'main.js',
            'sisyphus.js',
+           'vendor-multiselect.js',
+           'multiselect.js',
        ],
    ],
 ];
